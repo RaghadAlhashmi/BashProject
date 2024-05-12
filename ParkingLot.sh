@@ -13,7 +13,7 @@ generate_ticket_id() {
   echo "Ticket$ticket_counter"
 }
 park_car() {
-    car=$1
+  car=$1
   ticked_id=$(generate_ticket_id)
   parked_cars[$ticket_id]=$car
   time_parked[$ticket_id]=$(date +%s)
