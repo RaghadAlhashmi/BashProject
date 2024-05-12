@@ -14,12 +14,12 @@ generate_ticket_id() {
 }
 park_car() {
     car=$1
-    ticked_id=$(generate_ticket_id)
-    parked_cars[$ticket_id]=$car
-    time_parked[$ticket_id]=$(date +%s)
-    occupied_spots=$((occupied_spots + 1))
-    available_spots=(${availble_spots[@]/$occupied_Spots)
-    echo "Parked car: $car"
-    echo "Ticket ID: $ticket_id"
+  ticked_id=$(generate_ticket_id)
+  parked_cars[$ticket_id]=$car
+  time_parked[$ticket_id]=$(date +%s)
+  occupied_spots=$((occupied_spots + 1))
+  available_spots=(${availble_spots[@]/$occupied_Spots)
+  echo "Parked car: $car"
+  echo "Ticket ID: $ticket_id"
 }
     
