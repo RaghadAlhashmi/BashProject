@@ -12,6 +12,22 @@ generate_ticket_id() {
   ticket_counter=$((ticket_counter + 1))
   echo "Ticket$ticket_counter"
 }
+
+# Function to display available parking spots
+show_available_spots(){
+echo "Available parking spots: ${available_sspots[@]}"
+}
+
+# Function to prompt user to select a parking spot
+select_parking_spot(){
+read -p "Selecta parking spot: " selected_spot
+if [[ " ${available_spots[@]} " = = " $selected_spot " ]]; then
+     park_car "$car_number"
+else
+    echo "Invalid parking spot. Please select from the available spots."
+fi
+}
+
 park_car() {
   car=$1
   ticked_id=$(generate_ticket_id)
